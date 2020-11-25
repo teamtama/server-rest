@@ -6,12 +6,12 @@ import { LoggingMiddleware } from './middleware/logging.middleware';
 
 @Module({
   imports: [ConfigModule],
-  providers: [
-    {
-      provide: APP_GUARD,
-      useClass: ApiKeyGuard,
-    },
-  ],
+  // providers: [
+  //   {
+  //     provide: APP_GUARD,
+  //     useClass: ApiKeyGuard,
+  //   },
+  // ],
 })
 export class CommonModule implements NestModule {
   configure(consumer: MiddlewareConsumer): any {
